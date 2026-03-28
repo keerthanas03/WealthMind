@@ -2,6 +2,65 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/40 backdrop-blur-md border border-red-200/50 shadow-lg;
+    @apply bg-white/30 backdrop-blur-2xl border border-white/50 rounded-2xl transition-all duration-300;
+    box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.15); /* deeper violet shadow */
+  }
+
+  .glass-card-hover {
+    @apply hover:bg-white/40 hover:border-white/70 hover:shadow-2xl hover:-translate-y-1.5 cursor-pointer;
+  }
+
+  .bg-glass-gradient {
+    position: relative;
+    background-color: #faf8ff;
+    overflow: hidden;
+  }
+
+  /* Vibrant Animated Background Blobs - Multi-Color */
+  .bg-glass-gradient::before,
+  .bg-glass-gradient::after,
+  .bg-glass-gradient .ambient-blob {
+    content: '';
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: float 25s infinite alternate ease-in-out;
+  }
+
+  .bg-glass-gradient::before {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, rgba(16, 185, 129, 0) 70%); /* Emerald */
+    top: -100px;
+    left: -100px;
+  }
+
+  .bg-glass-gradient::after {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.4) 0%, rgba(236, 72, 153, 0) 70%); /* Rose/Pink */
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -12.5s;
+    animation-direction: alternate-reverse;
+  }
+
+  .bg-glass-gradient .ambient-blob {
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.35) 0%, rgba(14, 165, 233, 0) 70%); /* Ocean / Cyan */
+    top: 30%;
+    left: 40%;
+    animation-delay: -5s;
+    animation-duration: 30s;
+  }
+
+  @keyframes float {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { transform: translate(150px, -150px) scale(1.1) rotate(180deg); }
+    100% { transform: translate(-100px, 100px) scale(0.9) rotate(360deg); }
+  }
+
+  .text-glass-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700;
   }
 }
