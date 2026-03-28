@@ -3,8 +3,8 @@
 
 WealthMind is a modern, full-stack personal finance application that bridges the gap between traditional portfolio tracking and advanced, AI-driven behavioral finance. With a bespoke "Lavender Mist" aesthetic, an intuitive interface, and deep intelligence powered by Bytez.js, WealthMind is built for investors who want to understand the *why* behind their wealth.
 
-![WealthMind Preview](https://via.placeholder.com/1200x630/7c3aed/ffffff?text=WealthMind+Dashboard) 
-*(Screenshot placeholder - Insert your own dashboard image here)*
+<img width="1885" height="879" alt="image" src="https://github.com/user-attachments/assets/02722822-547b-46d0-a228-87c84499cfe9" />
+
 
 ---
 
